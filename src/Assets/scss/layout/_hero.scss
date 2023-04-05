@@ -1,0 +1,141 @@
+/*----------------------------------------*/
+/*  12. HERO CSS START
+/*----------------------------------------*/
+
+
+.hero {
+
+  &__area {
+    overflow: hidden;
+    
+    &-2 {
+      background-image: url(../imgs/bg/hero2-bg.png);
+      background-position: right center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+
+      .line {
+        padding: 240px 0;
+
+        @media #{$md} {
+          padding: 150px 0 240px;
+        }
+
+        @media #{$sm} {
+          padding: 120px calc(var(--bs-gutter-x) * .5) 120px calc(var(--bs-gutter-x) * .5);
+        }
+      }
+    }
+  }
+
+  &__content {
+    &-2 {
+      padding-bottom: 113px;
+
+      @media #{$sm} {
+        padding-bottom: 20px;
+      }
+
+      h1 {
+        font-weight: 500;
+        font-size: 132px;
+        line-height: 1;
+        color: var(--secondary);
+        padding-bottom: 20px;
+        @include zi-9;
+        opacity: 0;
+        animation: wcfadeUp 1s 0.25s forwards;
+
+        @media #{$xl} {
+          font-size: 100px;
+        }
+
+        @media #{$lg} {
+          font-size: 80px;
+        }
+
+        @media #{$md} {
+          font-size: 72px;
+        }
+
+        @media #{$sm} {
+          font-size: 36px;
+        }
+
+        &::after {
+          position: absolute;
+          content: "";
+          width: 100px;
+          height: 1px;
+          left: 0;
+          bottom: -10px;
+          background-color: var(--secondary);
+
+          @media #{$sm} {
+            bottom: 10px;
+          }
+        }
+
+        #typed,
+        .typed-cursor {
+          color: var(--primary);
+        }
+      }
+
+      p {
+        max-width: 660px;
+        font-size: 18px;
+        padding-left: 160px;
+        padding-bottom: 45px;
+        @include zi-9;
+        opacity: 0;
+        animation: wcfadeUp 1s 0.5s forwards;
+
+        @media #{$sm} {
+          padding-left: 0;
+        }
+      }
+
+      a {
+        margin-left: 160px;
+        @include zi-9;
+        opacity: 0;
+        animation: wcfadeUp 1s 0.75s forwards;
+
+        @media #{$sm} {
+          margin-left: 0;
+        }
+
+        strong {
+          width: 50px;
+          display: inherit;
+          height: 1px;
+          background: #fff;
+          margin-bottom: 5px;
+          margin-left: 5px;
+          position: relative;
+
+          &::after {
+            position: absolute;
+            content: "";
+            top: -5px;
+            right: 30px;
+            border: solid var(--white);
+            border-width: 0 1px 1px 0;
+            padding: 5px;
+            transform: rotate(-45deg);
+            transition: all 0.3s;
+            opacity: 0;
+          }
+        }
+
+        &:hover {
+          strong::after {
+            right: 0;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

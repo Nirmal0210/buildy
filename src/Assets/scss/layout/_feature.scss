@@ -1,0 +1,284 @@
+/*----------------------------------------*/
+/* 25. FEATURE CSS START
+/*----------------------------------------*/
+
+
+.feature {
+
+  &__area {
+    background-image: url(../imgs/feature/2/bg.png);
+    overflow: hidden;
+
+    .line {
+      padding-bottom: 30px;
+    }
+
+    &-2 {
+      overflow: hidden;
+    }
+
+    &-3 {
+      overflow: hidden;
+      
+      .line {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__left {
+    position: relative;
+    z-index: 1;
+
+    @media #{$md} {
+      padding-top: 30px;
+    }
+
+    @media #{$sm} {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    img {
+      border-radius: 5px;
+      transition: all 0.3s;
+    }
+  }
+
+  &__content {
+    &-3 {
+      @include zi-9;
+
+      @media #{$sm} {
+        padding-bottom: 40px;
+      }
+
+      p {
+        position: relative;
+        padding-right: 40px;
+        z-index: 1;
+
+        @media #{$md} {
+          padding-right: 0;
+        }
+
+        @media #{$sm} {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  &__right {
+    padding-left: 100px;
+    padding-top: 80px;
+
+    @media #{$lg} {
+      padding-left: 50px;
+      padding-top: 0;
+    }
+
+    @media #{$md} {
+      padding-left: 10px;
+      padding-top: 0;
+    }
+
+    @media #{$sm} {
+      padding-left: 0;
+    }
+  }
+
+  &__title {
+    &-3 {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 1;
+      color: var(--secondary);
+      padding-bottom: 20px;
+      @include zi-9;
+
+      @media #{$sm} {
+        padding-bottom: 15px;
+      }
+    }
+
+    &-wrapper-2 {
+      padding-bottom: 25px;
+    }
+  }
+
+  &__sticker {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: var(--white);
+    left: 40%;
+    top: 20%;
+    border-radius: 100%;
+    z-index: 1;
+
+    @media #{$md} {
+      width: 160px;
+      height: 160px;
+      left: 30%;
+      top: 30%;
+    }
+
+    @media #{$sm} {
+      width: 160px;
+      height: 160px;
+      left: 30%;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 7px;
+      height: 7px;
+      background: var(--primary);
+      left: 25%;
+      top: 35px;
+
+      @media #{$md} {
+        left: 17%;
+        top: 30px;
+      }
+
+      @media #{$sm} {
+        left: 17%;
+        top: 30px;
+      }
+    }
+  }
+
+  &__img {
+    &-1 {
+      padding-right: 50px;
+      transform: translateY(-70px);
+
+      @media #{$lg} {
+        padding-right: 20px;
+      }
+
+      @media #{$md} {
+        padding-right: 2%;
+        width: 58%;
+      }
+
+      @media #{$sm} {
+        padding-right: 2%;
+        width: 58%;
+      }
+    }
+    
+    &-2 {
+      transform: translateY(-60px);
+
+      @media #{$md} {
+        width: 40%;
+      }
+
+      @media #{$sm} {
+        width: 40%;
+      }
+    }
+
+    &-3 {
+      transform: translateY(-90px);
+      padding-left: 100px;
+
+      @media #{$lg} {
+        width: 100%;
+        padding-left: 0;
+      }
+
+      @media #{$md} {
+        width: 100%;
+        padding-left: 0;
+      }
+
+      @media #{$sm} {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+
+    &-4 {
+      position: absolute;
+      top: calc(50% - 21px);
+      left: calc(50% - 22px);
+    }
+
+    &-5 {
+      position: absolute;
+      top: calc(50% - 62px);
+      left: calc(50% - 62px);
+      animation: rotate 10s infinite linear;
+
+      @media #{$md} {
+        top: calc(50% - 50px);
+        left: calc(50% - 50px);
+        width: 100px;
+      }
+
+      @media #{$sm} {
+        top: calc(50% - 50px);
+        left: calc(50% - 50px);
+        width: 100px;
+      }
+    }
+  }
+
+  &__tab-wrapper {
+    position: relative;
+
+    button {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      color: var(--black-2);
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid var(--white-2);
+      padding: 0 30px;
+      @include zi-9;
+      transition: all 0.3s;
+
+      &.active,
+      &:hover {
+        color: var(--secondary);
+        border-bottom: 1px solid var(--black-4);
+      }
+    }
+
+    #feature_tab {
+      border: none;
+      padding-bottom: 20px;
+
+      li:first-child {
+        button {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding-top: 25px;
+    
+    @media #{$sm} {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    
+    li {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: var(--secondary);
+      @include zi-9;
+    }
+  }
+}

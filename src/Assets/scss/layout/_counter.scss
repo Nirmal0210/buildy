@@ -1,0 +1,99 @@
+/*----------------------------------------*/
+/* 18. COUNTER CSS START
+/*----------------------------------------*/
+
+
+.counter {
+
+  &__area {
+    background-image: url(../imgs/bg/counter-bg.png);
+    background-color: var(--secondary);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    .line {
+      padding-bottom: 375px;
+
+      @media #{$sm} {
+        padding-top: 60px;
+        padding-bottom: 0px;
+      }
+    }
+
+    .line::after,
+    .line::before,
+    .line-3,
+    .line-4,
+    .line-5 {
+      background: var(--gray-2);
+    }
+
+    &-2 {
+      background-image: url(../imgs/bg/counter-bg-2.png);
+      background-color: var(--primary);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+
+      .line {
+
+        @media #{$sm} {
+          padding-bottom: 10px; 
+        }
+
+        &::after,
+        &::before,
+        &-3,
+        &-4,
+        &-5 {
+          background-color: #fb9750;
+        }
+      }
+    }
+  }
+
+  &__content {
+    text-align: center;
+    @include zi-9;
+
+    @media #{$sm} {
+      padding-bottom: 60px; 
+    }
+
+    &-2 {
+      text-align: center;
+      @include zi-9;
+      
+      @media #{$md} {
+        padding-bottom: 10px; 
+      }
+
+      @media #{$sm} {
+        padding-bottom: 60px; 
+      }
+
+      p {
+        color: var(--white);
+      }
+    }
+  }
+
+  &__number {
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 1.1;
+    color: var(--white);
+    @include zi-9;
+
+    @media #{$md} {
+      font-size: 60px;
+    }
+
+    @media #{$sm} {
+      font-size: 60px;
+    }
+  }
+}

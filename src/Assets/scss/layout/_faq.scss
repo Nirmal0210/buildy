@@ -1,0 +1,240 @@
+/*----------------------------------------*/
+/* 20. FAQ CSS START
+/*----------------------------------------*/
+
+
+.faq {
+
+  &__area {
+    overflow: hidden;
+
+    .line {
+      padding: 130px 0;
+
+      @media #{$md} {
+        padding: 90px 0;
+      }
+
+      @media #{$sm} {
+        padding: 60px calc(var(--bs-gutter-x) * .5) 50px calc(var(--bs-gutter-x) * .5);
+      }
+    }
+  }
+
+  &__left {
+    padding-left: 60px;
+    transform-style: preserve-3d;
+    transition: all 0.3s;
+
+    @media #{$md} {
+      padding-left: 0;
+      padding-right: 15px;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    img {
+      border-radius: 5px;
+      width: 100%;
+    }
+  }
+
+  &__from {
+    background-color: var(--primary);
+    width: 300px;
+    padding: 20px 60px 8px;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -138px;
+    top: 50%;
+    margin-top: -75px;
+
+    @media #{$md} {
+      width: 260px; 
+      left: -70px; 
+    }
+
+    @media #{$sm} {
+      width: 260px;
+      left: -140px;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: var(--white);
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 75px;
+        height: 1px;
+        left: 60px;
+        top: 10px;
+        background-color: var(--white);
+      }
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: 80px;
+      line-height: 1.1;
+      color: var(--white);
+
+      @media #{$md} {
+        font-size: 60px; 
+      }
+
+      @media #{$sm} {
+        font-size: 60px; 
+      }
+    }
+  }
+
+  &__right {
+    padding-left: 85px;
+    padding-top: 70px;
+
+    @media #{$lg} {
+      padding-left: 55px;
+    }
+
+    @media #{$md} {
+      padding-left: 15px;
+      padding-top: 0;
+    }
+
+    @media #{$sm} {
+      padding-left: 0;
+    }
+  }
+
+  &__list {
+    padding-top: 30px;
+
+    .accordion-body {
+      padding-top: 30px;
+      padding-right: 50px;
+
+      @media #{$md} {
+        padding-top: 20px;
+        padding-right: 0;
+      }
+    }
+
+    .accordion-item {
+      border: none;
+      border-bottom: 1px solid var(--white-7);
+      border-radius: 0;
+
+      @media #{$md} {
+        margin-bottom: 0;
+      }
+    }
+
+    &-2 {
+      .accordion-item {
+        border: none;
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    @include zi-9;
+
+    button {
+      border: none;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+      color: var(--white);
+      background: var(--secondary);
+      width: 100%;
+      text-align: left;
+      padding: 15px 25px;
+      position: relative;
+      transition: all 0.5s;
+
+      &.collapsed {
+        color: var(--secondary);
+        background: var(--white);
+        &::after {
+          position: absolute;
+          content: "+";
+          width: 100%;
+          height: 100%;
+          left: 95%;
+          top: 13px;
+          font-size: 25px;
+          font-weight: 400;
+  
+          @media #{$sm} {
+            left: 94%;
+          }
+        }
+      }
+
+      &::after {
+        position: absolute;
+        content: "-";
+        width: 100%;
+        height: 100%;
+        left: 95%;
+        top: 13px;
+        font-size: 25px;
+        font-weight: 400;
+
+        @media #{$sm} {
+          left: 94%;
+        }
+      }
+    }
+
+    &-2 {
+      @extend .faq__title;
+      overflow: hidden;
+      margin-bottom: 15px;
+
+      button {
+        background-color: var(--primary);
+        border-radius: 3px;
+
+        &.collapsed {
+          color: var(--secondary);
+          background: var(--white-6);
+        }
+      }
+    }
+  }
+
+  &__img {
+    @include zi-9;
+    transition: all 0.3s;
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+
+  &__content {
+    padding-left: 50px;
+
+    @media #{$md} {
+      padding-left: 10px;
+    }
+
+    @media #{$sm} {
+      padding-left: 0;
+      padding-top: 50px;
+    }
+
+    p {
+      @include zi-9;
+    }
+  }
+
+}

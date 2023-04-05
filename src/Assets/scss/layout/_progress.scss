@@ -1,0 +1,70 @@
+/*----------------------------------------*/
+/*  26. PORTFOLIO CSS START
+/*----------------------------------------*/
+
+
+.progress {
+
+  &__area {
+    overflow: hidden;
+    
+    .line {
+      padding-bottom: 0;
+    }
+  }
+
+  &__left {
+    @include zi-9;
+
+    p {
+      max-width: 470px;
+    }
+  }
+
+  &__right {
+    padding-left: 80px;
+    @include zi-9;
+
+    @media #{$lg} {
+      padding-left: 50px;
+    }
+
+    @media #{$md} {
+      padding-left: 10px;
+    }
+
+    @media #{$sm} {
+      padding-left: 0;
+      padding-top: 30px;
+    }
+
+    .progress {
+      height: 1.5px;
+      background: var(--white-2);
+
+      &-bar {
+        background-color: var(--primary);
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.2;
+    color: var(--secondary);
+    padding-bottom: 20px;
+    @include zi-9;
+
+    @media #{$sm} {
+      font-size: 32px;
+    }
+  }
+
+  &__label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--secondary);
+  }
+}

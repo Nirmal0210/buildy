@@ -1,0 +1,347 @@
+/*----------------------------------------*/
+/* 33. FOOTER CSS START
+/*----------------------------------------*/
+
+
+.footer {
+  &__area {
+    background-color: var(--secondary);
+    @include zi-9;
+    overflow: hidden;
+
+    @media #{$sm} {
+      .g-0 {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+    }
+  }
+
+  &__top {
+    padding: 120px 0;
+    border-bottom: 1px solid var(--black-3);
+
+    @media #{$md} {
+      padding: 80px 0 70px; 
+    }
+
+    @media #{$sm} {
+      padding: 60px 0 20px;   
+    }
+
+    &-3 {
+      text-align: center;
+      padding: 120px 0 120px 100px;
+      border-bottom: 1px solid var(--black-3);
+
+      @media #{$lg} {
+        padding: 120px 0;
+        margin-left: 70px;
+      }
+
+      @media #{$md} {
+        padding: 90px 0;
+      }
+
+      @media #{$sm} {
+        padding: 60px 0;
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 1.5;
+        color: var(--white);
+        padding-bottom: 5px;
+      }
+    }
+  }
+
+  &__bottom {
+    &-3 {
+      @media #{$lg} {
+        padding: 0 10px 0 80px;
+      }
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 1.2;
+    color: var(--white);
+    position: relative;
+    transition: all 0.3s;
+    margin-bottom: 10px;
+
+    @media #{$sm} {
+      font-size: 48px;
+    }
+
+    &:hover {
+      color: var(--primary);
+
+      &::after {
+        background-color: var(--primary);
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 3px;
+      left: 5px;
+      bottom: -5px;
+      background-color: var(--white);
+      border-radius: 3px;
+      transition: all 0.3s;
+    }
+  }
+
+  &__widget {
+
+    @media #{$sm} {
+      padding-bottom: 40px;   
+    }
+
+    &-2 {
+      padding-left: 30px;
+
+      @media #{$sm} {
+        padding-left: 0; 
+      }
+    }
+
+    p {
+      line-height: 26px;
+      color: var(--black-4);
+      max-width: 270px;
+      padding-top: 30px;
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 25px;
+      color: var(--white);
+      text-transform: capitalize;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__quick-link {
+    li {
+      a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: var(--black-4);
+        padding: 5px 0;
+        display: inline-block;
+        transition: all 0.3s;
+
+        &:hover {
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  &__address {
+    li {
+      color: var(--black-4);
+
+      a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: var(--black-4);
+        display: inline-block;
+        padding: 5px 0;
+        transition: all 0.3s;
+
+        &:hover {
+          color: var(--white);
+        }
+
+        &.phone {
+          color: var(--white);
+          position: relative;
+
+          &::after{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 1px;
+            left: 0;
+            bottom: 0px;
+            background-color: var(--white);
+            transition: all 0.3s;
+          }
+          &:hover {
+            &::after{
+              width: 0%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    @media #{$md} {
+      grid-column: span 6; 
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      color: var(--white);
+
+      a {
+        color: var(--primary);
+         &:hover {
+          color: var(--orange-2);
+         }
+      }
+    }
+
+    &-3 {
+      @extend .footer__copyright;
+
+      @media #{$sm} {
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__subscribe {
+    padding: 35px 90px 40px;
+    border-left: 1px solid var(--black-3);
+    border-right: 1px solid var(--black-3);
+
+    @media #{$lg} {
+      padding: 35px 50px 40px;
+    }
+
+    @media #{$md} {
+      grid-column: span 6;
+      padding: 20px 10px 30px;
+      border-right: none;
+    }
+
+    @media #{$sm} {
+      border: none;
+      padding: 30px 0;   
+    }
+
+    form {
+      position: relative;
+    }
+
+    input {
+      width: 100%;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      color: var(--white);
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid var(--black-3);
+      padding: 7px 30px 12px 0;
+      outline: none;
+
+      &::placeholder {
+        opacity: 1;
+        color: var(--white);
+      }
+    }
+
+    .submit {
+      position: absolute;
+      background: transparent;
+      border: none;
+      color: var(--white);
+      font-size: 20px;
+      right: 0;
+      top: 5px;
+      transition: all 0.3s;
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+
+    &-3 {
+      @extend .footer__subscribe;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+
+    @media #{$md} {
+      grid-column: span 12;
+      justify-content: center;
+      padding: 25px 0 20px;
+      border-top: 1px solid var(--black-3);
+    }
+
+    @media #{$sm} {
+      justify-content: flex-start;   
+    }
+
+    &-media {
+      display: flex;
+      gap: 15px;
+
+      li {
+        a {
+          font-size: 20px;
+          color: var(--white);
+          display: inline-block;
+          padding: 0 3px;
+
+          &:hover {
+            color: var(--primary);
+          }
+        }
+      }
+    }
+
+    &-3 {
+      @extend .footer__social;
+      @media #{$sm} {
+        justify-content: center;
+        text-align: center;  
+      }
+    }
+  }
+
+  &__bottom-inner {
+    display: grid;
+    grid-template-columns: 1.125fr 2fr 0.7fr;
+
+    @media #{$md} {
+      grid-template-columns: repeat(12, 1fr);  
+    }
+
+    @media #{$sm} {
+      padding: 30px 0;
+      grid-template-columns: 1fr;
+    }
+  }
+
+}

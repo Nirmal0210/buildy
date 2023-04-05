@@ -1,0 +1,110 @@
+/*----------------------------------------*/
+/*  07. ANIMATION CSS START
+/*----------------------------------------*/
+
+
+@keyframes ripple-1 {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+
+@keyframes moveBottom {
+  0% {
+    transform: translateX(-25px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25px);
+  }
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes wcLoading {
+  0% {
+    transform: scaleY(0.1);
+    background: var(--white);
+  }
+  50% {
+    transform: scaleY(1);
+    background: var(--primary);
+  }
+
+  100% {
+    transform: scaleY(0.1);
+    background: transparent;
+  }
+}
+
+
+// Scroll
+@keyframes scroll {
+  from {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(calc(-100% - 20px));
+    -ms-transform: translateX(calc(-100% - 20px));
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+
+// Fade Up
+@keyframes wcfadeUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(50px);
+		-ms-transform: translateY(50px);
+		transform: translateY(50px);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+.wcfadeUp {
+	opacity: 0;
+	-webkit-animation-name: wcfadeUp;
+	animation-name: wcfadeUp;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.wcfadeUp2 {
+  @extend .wcfadeUp;
+  animation-delay: 0.3s;
+}
+
+.wcfadeUp3 {
+  @extend .wcfadeUp;
+  animation-delay: 0.45s;
+}
+
+.wcfadeUp4 {
+  @extend .wcfadeUp;
+  animation-delay: 0.6s;
+}

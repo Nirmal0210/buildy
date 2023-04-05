@@ -1,0 +1,67 @@
+/*----------------------------------------*/
+/*  29. GALLERY CSS START
+/*----------------------------------------*/
+
+
+.gallery {
+  &__area {
+    overflow: hidden;
+    
+    .line {
+      padding: 10px 0 30px;
+    }
+  }
+
+  &__top {
+    text-align: center;
+
+    p {
+      font-size: 14px;
+      @include zi-9;
+
+      a {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--secondary);
+        padding: 5px 14px;
+        border: 1px solid var(--white-4);
+        border-radius: 30px;
+        transition: all 0.3s;
+        margin-left: 8px;
+
+        &:hover {
+          color: var(--primary);
+          border-color: var(--primary);
+        }
+      }
+    }
+  }
+
+  &__items {
+    padding-left: 100px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    @media #{$lg} {
+      padding-left: 0;
+    }
+
+    @media #{$md} {
+      padding-left: 0;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media #{$sm} {
+      padding-left: 0;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    img {
+      width: 100%;
+    }
+  }
+}

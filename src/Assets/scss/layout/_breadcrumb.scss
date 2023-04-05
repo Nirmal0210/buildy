@@ -1,0 +1,71 @@
+/*----------------------------------------*/
+/*  14. BREADCRUMB CSS START
+/*----------------------------------------*/
+
+
+.breadcrumb {
+  &__area {
+    padding: 170px 0;
+    text-align: center;
+    background-image: url(../imgs/bg/breadcrumb-bg.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+    @media #{$md} {
+      padding: 130px 0;
+    }
+
+    @media #{$sm} {
+      padding: 100px 0;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: #040A1A;
+      opacity: 0.8;
+      z-index: -1;
+    }
+  }
+
+  &__content {
+    p {
+      font-weight: 500;
+      color: var(--white);
+      opacity: 0;
+      animation: wcfadeUp 1s 0.3s forwards;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 1.2;
+    color: var(--white);
+    text-transform: capitalize;
+    padding-bottom: 20px;
+    opacity: 0;
+    animation: wcfadeUp 1s 0.15s forwards;
+
+    @media #{$lg} {
+      font-size: 60px;
+    }
+
+    @media #{$md} {
+      font-size: 48px;
+      padding-bottom: 15px;
+    }
+
+    @media #{$sm} {
+      font-size: 36px;
+      padding-bottom: 10px;
+    }
+  }
+}

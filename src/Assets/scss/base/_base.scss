@@ -1,0 +1,162 @@
+/*----------------------------------------*/
+/* 02. BASE CSS START
+/*----------------------------------------*/
+
+
+
+// Font Family
+@font-face {
+  font-family: EuclidCircularB;
+  src: url("../fonts/Euclid Circular B Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: EuclidCircularB;
+  src: url("../fonts/Euclid Circular B Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: EuclidCircularB;
+  src: url("../fonts/Euclid Circular B Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: EuclidCircularB;
+  src: url("../fonts/Euclid Circular B SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: EuclidCircularB;
+  src: url("../fonts/Euclid Circular B Bold.ttf");
+  font-weight: 700;
+}
+
+
+//  Body Line CSS
+.line {
+  position: relative;
+  padding: 120px 0;
+
+  @media #{$md} {
+    padding: 80px 0;
+  }
+
+  @media #{$sm} {
+    padding: 60px calc(var(--bs-gutter-x) * .5) 60px calc(var(--bs-gutter-x) * .5);
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--white-7);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    left: 25%;
+    top: 0;
+    background: var(--white-7);
+  }
+
+  &-3 {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    background: var(--white-7);
+  }
+
+  &-4 {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    left: 75%;
+    top: 0;
+    background: var(--white-7);
+  }
+
+  &-5 {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    left: 100%;
+    top: 0;
+    background: var(--white-7);
+  }
+}
+
+
+// Container Max Width 1170px
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+@media #{$xxxl} {
+  .col-xxxl-2 {
+    flex: 0 0 auto;
+    width: 17%;
+  }
+  .col-xxxl-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .col-xxxl-7 {
+    flex: 0 0 auto;
+    width: 58%;
+  }
+}
+
+
+// Common Classes
+.zi-9 {
+  position: relative;
+  z-index: 9;
+}
+
+// Border Left
+.b-left {
+  border-left: 1px solid var(--white-7);
+}
+
+// Border Right
+.b-right {
+  border-right: 1px solid var(--white-7);
+}
+
+// Border Radius Left
+.br-left {
+  border-radius: 5px 0 0 5px;
+}
+
+// Border Radius Right
+.br-right {
+  border-radius: 0 5px 5px 0;
+}
+
+// Menu Fixed
+.menu-fixed {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--white-7);
+  z-index: 99;
+}

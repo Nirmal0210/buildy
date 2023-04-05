@@ -1,0 +1,70 @@
+/*----------------------------------------*/
+/*  05. TITLE CSS START
+/*----------------------------------------*/
+
+
+.section {
+  &-title {
+    font-weight: 500;
+    font-size: 50px;
+    color: var(--secondary);
+    line-height: 1.1;
+    @include zi-9;
+
+    @media #{$xl} {
+      font-size: 45px;
+    }
+
+    @media #{$lg} {
+      font-size: 36px;
+    }
+
+    @media #{$md} {
+      font-size: 32px;
+    }
+
+    @media #{$sm} {
+     font-size: 32px; 
+    }
+
+    span {
+      color: var(--primary);
+    }
+  }
+
+  &-sub-title {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: var(--black-2);
+    padding: 6px 10px;
+    background: var(--white-4);
+    border-radius: 4px;
+    @include zi-9;
+    margin-bottom: 15px;
+
+    &-2 {
+      display: inline-block;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 26px;
+      color: var(--secondary);
+      position: relative;
+      text-transform: capitalize;
+      margin-bottom: 20px;
+      @include zi-9;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 50px;
+        height: 1px;
+        right: -60px;
+        top: calc(50% - -1px);
+        background-color: var(--secondary);
+      }
+    }
+  }
+}

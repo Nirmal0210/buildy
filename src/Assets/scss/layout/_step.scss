@@ -1,0 +1,48 @@
+/*----------------------------------------*/
+/*  28. STEP CSS START
+/*----------------------------------------*/
+
+
+.step {
+  &__area {  
+    overflow: hidden;
+  }
+
+  &__content {
+    text-align: center;
+    background-image: url(../imgs/bg/step-1-bg.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 30px;
+    @include zi-9;
+
+    @media #{$sm} {
+      padding-bottom: 20px; 
+    }
+
+    &.step-2 {
+      background-image: url(../imgs/bg/step-2-bg.png);
+    }
+
+    &.step-3 {
+      background-image: url(../imgs/bg/step-3-bg.png);
+    }
+
+    &.step-4 {
+      background-image: url(../imgs/bg/step-4-bg.png);
+    }
+
+    img {
+      margin-bottom: 20px;
+    }
+
+    h4 {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 1.2;
+      color: var(--secondary);
+      padding-bottom: 15px;
+
+    }
+  }
+}

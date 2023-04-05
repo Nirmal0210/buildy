@@ -1,0 +1,44 @@
+/*----------------------------------------*/
+/*  32. 404 CSS START
+/*----------------------------------------*/
+
+
+.error {
+  &__area {
+    background-image: url(../imgs/bg/404.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    .line {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    @include zi-9;
+
+    img {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    P {
+      max-width: 540px;
+      margin: 0 auto;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      color: var(--black-2);
+      padding-bottom: 30px;
+    }
+
+    a {
+      border-radius: 5px;
+    }
+  }
+}

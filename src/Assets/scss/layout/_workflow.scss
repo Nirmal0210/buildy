@@ -1,0 +1,131 @@
+/*----------------------------------------*/
+/*  27. WORKFLOW CSS START
+/*----------------------------------------*/
+
+
+.workflow {
+
+  &__area {
+    .line {
+      padding-bottom: 0;
+    }
+  }
+
+  &__wrapper {
+    background-image: url(../imgs/bg/workflow-bg.png);
+    background-position: 160px 0;
+    background-repeat: no-repeat;
+    padding: 100px 0 200px;
+
+    @media #{$lg} {
+      background-size: 70% 100%;
+      padding: 0 0 100px; 
+    }
+
+    @media #{$md} {
+      background-size: 70% 100%;
+      padding: 30px 0; 
+    }
+
+    @media #{$sm} {
+      padding: 0; 
+    }
+  }
+
+  &__left {
+    position: relative;
+    z-index: 1;
+
+    img {
+      border-radius: 5px;
+      
+      @media #{$lg} {
+        width: 80%;
+      }
+
+      @media #{$md} {
+        width: 80%;
+      }
+
+      @media #{$sm} {
+        width: 100%;
+      }
+    }
+  }
+
+  &__right {
+    padding-left: 100px;
+    padding-top: 100px;
+    position: relative;
+    z-index: 1;
+
+    @media #{$lg} {
+      padding-left: 60px;
+      padding-top: 60px;
+    }
+
+    @media #{$md} {
+      padding-left: 30px;
+      padding-top: 0;
+    }
+
+    @media #{$sm} {
+      padding-left: 0;
+      padding-top: 220px;
+    }
+
+    p {
+      padding: 30px 0;
+    }
+
+    ul {
+      display: flex;
+      gap: 30px;
+
+      li {
+        a {
+          display: inline-block;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 26px;
+          color: var(--black-2);
+          transition: all 0.3s;
+          position: relative;
+
+          &::after {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 1px;
+            left: 0;
+            bottom: 0px;
+            background-color: var(--secondary);
+            transition: all 0.3s;
+          }
+
+          &:hover {
+            color: var(--secondary);
+
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__thumb {
+    transition: all 0.3s;
+    transform: translateY(-15%);
+
+    &-2 {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: all 0.3s;
+      transform: translateY(80%);
+    }
+  }
+
+}

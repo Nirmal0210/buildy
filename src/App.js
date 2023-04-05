@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState, useEffect } from "react";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "./Components/GlobalStyles";
+import { darkTheme, lightTheme } from "./Components/Themes";
+import AppLayout from "./Layout/AppLayout";
 function App() {
+  const [theme, setTheme] = useState("light");
+  let themeMode = theme === "light" ? lightTheme : darkTheme;
+  const setMode = (mode) => {
+    window.localStorage.setItem("theme", mode);
+    setTheme(mode);
+  };
+  const themeToggler = () => {
+    theme === "light" ? setMode("dark") : setMode("light");
+  };
+  useEffect(() => {
+    let localTheme = window.localStorage.getItem("theme");
+    localTheme ? setTheme(localTheme) : setMode("light");
+    themeMode = localTheme === "light" ? lightTheme : darkTheme;
+  }, [theme]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={themeMode}>
+      <GlobalStyles />
+      <AppLayout themeToggler={themeToggler} theme={theme} />
+    </ThemeProvider>
   );
 }
 

@@ -1,0 +1,106 @@
+/*----------------------------------------*/
+/* 24. COMPANY CSS START
+/*----------------------------------------*/
+
+
+.company {
+
+  &__area {
+    overflow: hidden;
+
+    .line {
+      padding-top: 10px;
+      padding-bottom: 130px;
+
+      @media #{$sm} {
+        padding-top: 0;
+        padding-bottom: 60px; 
+      }
+    }
+
+    &-2 {
+      background-color: var(--primary);
+      padding: 30px 0;
+      
+      .marquee {
+        --gap: 20px;
+        display: flex;
+        overflow: hidden;
+        user-select: none;
+        gap: var(--gap);
+
+        li {
+          font-size: 28px;
+          font-weight: 500;
+          color: var(--secondary);
+          text-transform: uppercase;
+        }
+        
+        &__content {
+          flex-shrink: 0;
+          display: flex;
+          justify-content: space-around;
+          min-width: 100%;
+          gap: var(--gap);
+          animation: scroll 10s linear infinite;
+        }
+      }
+    }
+
+    &-3 {
+      .line {
+        padding-top: 130px;
+
+        @media #{$sm} {
+          padding-top: 60px;
+        }
+      }
+    }
+  }
+
+  &__logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 60px 30px;
+    
+    @media #{$sm} {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 40px 20px;
+    }
+  }
+
+  &__logo {
+    text-align: center;
+    @include zi-9;
+
+    &:nth-child(1),
+    &:nth-child(6) {
+      text-align: left;
+
+      @media #{$sm} {
+        text-align: unset;
+      }
+    }
+
+    &:nth-child(5),
+    &:nth-child(10) {
+      text-align: right;
+
+      @media #{$sm} {
+        text-align: unset;
+      }
+    }
+
+    img {
+
+      @media #{$md} {
+        width: 90px;
+      }
+
+      @media #{$sm} {
+       width: 72px; 
+      }
+    }
+  }
+
+}

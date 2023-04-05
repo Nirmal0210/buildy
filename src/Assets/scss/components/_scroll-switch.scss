@@ -1,0 +1,68 @@
+/*----------------------------------------*/
+/*  08. SCROLL CSS START
+/*----------------------------------------*/
+
+
+.scroll-switch {
+  position: fixed;
+  width: auto;
+  height: 300px;
+  left: 50px;
+  top: 0;
+  z-index: 1;
+
+  @media #{$lg} {
+    left: 0;
+  }
+
+  @media #{$md} {
+    left: 0;
+  }
+
+  @media #{$sm} {
+    display: none;
+  }
+}
+
+.scroll-bar {
+  transform: rotate(-90deg);
+  position: absolute;
+  width: 140px;
+  bottom: -170px;
+  right: -50px;
+  transition: all 0.3s;
+
+  button {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--black);
+    background-color: transparent;
+    border: none;
+    padding-left: 10px;
+  }
+
+  i {
+    animation: moveBottom 5s infinite;
+    color: var(--gray-4);
+  }
+
+  &-2 {
+    @extend .scroll-bar;
+    position: unset;
+    margin-left: -22px;
+    
+    @media #{$lg} {
+      margin-left: -37px;
+    }
+
+    @media #{$md} {
+      display: none;
+    }
+
+    @media #{$sm} {
+      display: none;
+    }
+  }
+}
