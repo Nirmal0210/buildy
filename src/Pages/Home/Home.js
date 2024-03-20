@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Typed from "react-typed";
+// import Typed from "react-typed";
+// import { ReactTyped } from "react-typed";
 import Testimonials from "../../Common/Testimonials";
 import CompletedProject from "../../Common/CompletedProject";
 import CaseStudies from "../../Common/CaseStudies";
@@ -75,7 +76,7 @@ const Home = () => {
                   Creating beautiful spaces with precision and expertise for{" "}
                   <br />
                   <span id="typed_lists" style={{ color: "#F68A0A" }}>
-                    <Typed
+                    {/* {<ReactTyped
                       strings={[
                         "Business",
                         "Home",
@@ -85,7 +86,7 @@ const Home = () => {
                       typeSpeed={40}
                       backSpeed={50}
                       loop
-                    />
+                    />} */}
                   </span>
                   <span id="typed"></span>
                 </h1>
